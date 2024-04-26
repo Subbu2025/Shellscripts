@@ -31,3 +31,4 @@ echo_with_line_number "The current system host name is: "; hostname;
 
 # I am pushing this  script to my github repository
 echo "Hey $USER, NOw your going to push this script to your github repository"
+echo "Hey $USER, this file is successfully added to your github repository: Shellscripts.git"
