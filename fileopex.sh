@@ -67,6 +67,13 @@ echo "$filename is an executable file"
 else
 echo "$filename is not an executable file"
 fi
+# Check if current user is the file owner or not
+if [ -o $filepath ]
+then
+echo "$USER is the owner of this $filename"
+else
+echo "$USER is not the owner of this $filename"
+fi
 
 
 
