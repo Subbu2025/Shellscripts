@@ -5,11 +5,12 @@
 # This is a single line comment
 
 # This is  the way to make multilines as comments in bash
-: '
+<<comments
 Hey, You are using multiline commenting mode
 This is for multiline commenting in bash.
 go on
-go on'
+go on
+comments
 
 echo "Hey $USER, your testing  bash comment lines script here";
 
