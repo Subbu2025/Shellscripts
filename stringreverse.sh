@@ -4,7 +4,7 @@
 # Function to reverse a string
 reverse_string()
 {
-   input_string=$1
+   input_string=$input
 
    reversed_string=""
   length=${#input_string}
