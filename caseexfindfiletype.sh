@@ -16,7 +16,7 @@ for name in "$dir_path"/*
 do
  item_name=$(basename "$name")
  
-if [ -d "$name" ]
+ if [ -d "$name" ]
   then echo "$item_name @is a sub directory"
  elif [ -f "$name" ]
  then  
