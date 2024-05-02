@@ -27,4 +27,6 @@ If you’re only interested in capturing errors and not the standard output, you
 3. Debugging Scripts:
 When debugging, you might want to ignore error messages temporarily to focus on the script’s flow. Redirecting errors to /dev/null can help with that.
 
+comments
+echo "standradr"-n > /dev/null 2>&1
 
