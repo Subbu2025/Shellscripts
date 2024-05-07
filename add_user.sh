@@ -12,7 +12,7 @@ read -rp "Enter the Username: " user_name
 if id "$user_name" &>/dev/null
 then
 	echo "Username $user_name is already exists" >&2
-	return 1
+	exit 1
 fi
 
 #Prompt for password
@@ -24,11 +24,14 @@ echo
 
 useradd -m -p "$password" "$user_name" &>/dev/null
 
-#Set the password for the user
-#echo "$user_name:$password" | chpasswd
-
-#Display a success message
-echo "User $user_name is added successfully"
+if [ $? -eq 0 ]
+then
+      #Display a success message
+      echo "User $user_name is added successfully"
+else
+      #Display an error message
+      echo "Failed to add user $user_name" >&2
+fi
 }
 
 # Main Script
