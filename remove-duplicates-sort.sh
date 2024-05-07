@@ -10,6 +10,9 @@ read -rp "Enter the array of items: " input
 # Split the input into an array using space as delimiter
 IFS=' ' read -r -a my_array <<< "$input"
 
+#The string contained in the variable $input is provided as input to the read command, 
+#which reads it into an array named my_array, splitting it based on the space character due to the IFS=' ' setting.
+
 sorted_unique_array=($(echo "${my_array[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
 echo "${sorted_unique_array[@]}"
 
@@ -44,3 +47,10 @@ is
 a
 sentence.
 comments
+<<comment
+<<< operator is used for here-strings. Here's what it does:
+
+    <<<: This is a here-string operator in Bash.
+    It allows you to pass a string as input to a command or a construct that reads from standard input.
+    The string following <<< is treated as input to the command or construct immediately preceding it.
+comment
